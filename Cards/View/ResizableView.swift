@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ResizableView: ViewModifier {
-    @State private var transform = Transform()
     @State private var previousOffset: CGSize = .zero
     @State private var previousRotation: Angle = .zero
     @State private var scale: CGFloat = 1.0
+    @Binding var transform: Transform
     func body(content: Content) -> some View {
         let scaleGesture = MagnificationGesture()
             .onChanged { scale in
@@ -46,6 +46,9 @@ struct ResizableView: ViewModifier {
             .offset(transform.offset)
             .gesture(dragGesture)
             .gesture(SimultaneousGesture(rotationGesture, scaleGesture))
+            .onAppear {
+                previousOffset = transform.offset
+            }
     }
 }
 
@@ -53,6 +56,6 @@ struct ResizableView_Previews: PreviewProvider {
     static var previews: some View {
         RoundedRectangle(cornerRadius: 30.0)
             .foregroundColor(Color.red)
-            .modifier(ResizableView())
+            .resizableView(transform: .constant(Transform()))
     }
 }
