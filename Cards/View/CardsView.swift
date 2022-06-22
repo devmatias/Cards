@@ -26,5 +26,9 @@ struct CardsView_Previews: PreviewProvider {
         CardsView()
             .environmentObject(ViewState())
             .environmentObject(CardStore(defaultData: true))
+        CardsView()
+            .preferredColorScheme(.dark)
+            .environmentObject(ViewState())
+            .environmentObject(CardStore(defaultData: true))
     }
 }

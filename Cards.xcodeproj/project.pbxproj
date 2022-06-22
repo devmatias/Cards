@@ -13,6 +13,8 @@
 		3125562A2860BB4B002360E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312556292860BB4B002360E2 /* Card.swift */; };
 		3125562C2860BBB0002360E2 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125562B2860BBB0002360E2 /* CardStore.swift */; };
 		3125562F2860C68D002360E2 /* CardElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125562E2860C68D002360E2 /* CardElementView.swift */; };
+		31255634286114CC002360E2 /* StickerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31255633286114CC002360E2 /* StickerPicker.swift */; };
+		31255636286116D3002360E2 /* Stickers in Resources */ = {isa = PBXBuildFile; fileRef = 31255635286116D3002360E2 /* Stickers */; };
 		3126BC50285E1F0400D4FF1B /* CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC4F285E1F0400D4FF1B /* CardsApp.swift */; };
 		3126BC52285E1F0400D4FF1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC51285E1F0400D4FF1B /* ContentView.swift */; };
 		3126BC54285E1F0600D4FF1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3126BC53285E1F0600D4FF1B /* Assets.xcassets */; };
@@ -41,6 +43,9 @@
 		312556292860BB4B002360E2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3125562B2860BBB0002360E2 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
 		3125562E2860C68D002360E2 /* CardElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElementView.swift; sourceTree = "<group>"; };
+		3125563028610EF4002360E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		31255633286114CC002360E2 /* StickerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPicker.swift; sourceTree = "<group>"; };
+		31255635286116D3002360E2 /* Stickers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Stickers; path = "../../../suia-materials-editions-1.0/16-adding-assets-to-your-app/assets/Stickers"; sourceTree = "<group>"; };
 		3126BC4C285E1F0400D4FF1B /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3126BC4F285E1F0400D4FF1B /* CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApp.swift; sourceTree = "<group>"; };
 		3126BC51285E1F0400D4FF1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,16 +79,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3125562D2860C63A002360E2 /* SingleCardViews */ = {
+		3125562D2860C63A002360E2 /* Single Card Views */ = {
 			isa = PBXGroup;
 			children = (
+				31255632286114A7002360E2 /* Card Modal Views */,
 				3126BC61285E205D00D4FF1B /* SingleCardView.swift */,
 				3126BC67285E25F500D4FF1B /* CardDetailView.swift */,
 				3126BC7E285E5D5500D4FF1B /* CardToolbar.swift */,
 				3126BC6B285E27BC00D4FF1B /* CardBottomToolbar.swift */,
 				3125562E2860C68D002360E2 /* CardElementView.swift */,
 			);
-			path = SingleCardViews;
+			path = "Single Card Views";
+			sourceTree = "<group>";
+		};
+		31255632286114A7002360E2 /* Card Modal Views */ = {
+			isa = PBXGroup;
+			children = (
+				31255633286114CC002360E2 /* StickerPicker.swift */,
+			);
+			path = "Card Modal Views";
 			sourceTree = "<group>";
 		};
 		3126BC43285E1F0400D4FF1B = {
@@ -105,12 +119,14 @@
 		3126BC4E285E1F0400D4FF1B /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				3125563028610EF4002360E2 /* Info.plist */,
 				3126BC4F285E1F0400D4FF1B /* CardsApp.swift */,
 				3126BC79285E5A5E00D4FF1B /* Config */,
 				3126BC76285E55E700D4FF1B /* Extensions */,
 				3126BC6D285E2F8400D4FF1B /* View */,
 				3126BC6F285E2FAC00D4FF1B /* Model */,
 				3126BC53285E1F0600D4FF1B /* Assets.xcassets */,
+				31255635286116D3002360E2 /* Stickers */,
 				3126BC55285E1F0600D4FF1B /* Preview Content */,
 			);
 			path = Cards;
@@ -129,11 +145,11 @@
 			isa = PBXGroup;
 			children = (
 				3126BC51285E1F0400D4FF1B /* ContentView.swift */,
-				3126BC5D285E1F5000D4FF1B /* CardsListView.swift */,
 				3126BC65285E224800D4FF1B /* CardsView.swift */,
+				3126BC5D285E1F5000D4FF1B /* CardsListView.swift */,
 				3126BC5F285E200E00D4FF1B /* CardThumbnailView.swift */,
 				3126BC70285E4CB900D4FF1B /* ResizableView.swift */,
-				3125562D2860C63A002360E2 /* SingleCardViews */,
+				3125562D2860C63A002360E2 /* Single Card Views */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3126BC57285E1F0600D4FF1B /* Preview Assets.xcassets in Resources */,
+				31255636286116D3002360E2 /* Stickers in Resources */,
 				3126BC54285E1F0600D4FF1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +274,7 @@
 				3126BC75285E507000D4FF1B /* Operators.swift in Sources */,
 				3126BC60285E200E00D4FF1B /* CardThumbnailView.swift in Sources */,
 				31255624285E6541002360E2 /* PreviewData.swift in Sources */,
+				31255634286114CC002360E2 /* StickerPicker.swift in Sources */,
 				3125562F2860C68D002360E2 /* CardElementView.swift in Sources */,
 				3125562A2860BB4B002360E2 /* Card.swift in Sources */,
 				3126BC6A285E279100D4FF1B /* CardModal.swift in Sources */,
@@ -393,9 +411,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Cards/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,9 +439,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Cards/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

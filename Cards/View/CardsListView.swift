@@ -19,10 +19,11 @@ struct CardsListView: View {
                             Button(action: { store.remove(card) }) {
                                 Label("Delete", systemImage: "trash")
                             }
-                            .onTapGesture {
-                                viewState.showAllCards.toggle()
-                                viewState.selectedCard = card
-                            }
+
+                        }
+                        .onTapGesture {
+                            viewState.showAllCards.toggle()
+                            viewState.selectedCard = card
                         }
                 }
             }
