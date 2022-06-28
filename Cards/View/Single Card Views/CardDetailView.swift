@@ -10,8 +10,9 @@ import SwiftUI
 struct CardDetailView: View {
     @EnvironmentObject var viewState: ViewState
     @State private var currentModal: CardModal?
-    @Binding var card: Card
+    @State private var images: [UIImage] = []
     @State private var stickerImage: UIImage?
+    @Binding var card: Card
 
     func bindingTransform(for element: CardElement) -> Binding<Transform> {
         guard let index = element.index(in: card.elements) else {
@@ -41,6 +42,7 @@ struct CardDetailView: View {
     var body: some View {
         content
             .modifier(CardToolbar(currentModal: $currentModal))
+            .onDrop(of: [.image], delegate: CardDrop(card: $card))
             .sheet(item: $currentModal) { item in
                 switch item {
                 case .stickerPicker:
@@ -50,6 +52,14 @@ struct CardDetailView: View {
                                 card.addElement(uiImage: stickerImage)
                             }
                             stickerImage = nil
+                        }
+                case .photoPicker:
+                    PhotoPicker(images: $images)
+                        .onDisappear() {
+                            for image in images {
+                                card.addElement(uiImage: image)
+                            }
+                            images = []
                         }
                 default:
                     EmptyView()

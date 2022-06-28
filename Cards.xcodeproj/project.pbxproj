@@ -15,6 +15,8 @@
 		3125562F2860C68D002360E2 /* CardElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125562E2860C68D002360E2 /* CardElementView.swift */; };
 		31255634286114CC002360E2 /* StickerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31255633286114CC002360E2 /* StickerPicker.swift */; };
 		31255636286116D3002360E2 /* Stickers in Resources */ = {isa = PBXBuildFile; fileRef = 31255635286116D3002360E2 /* Stickers */; };
+		312556382863AD8C002360E2 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312556372863AD8C002360E2 /* PhotoPicker.swift */; };
+		3125563A2863BC7A002360E2 /* CardDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312556392863BC79002360E2 /* CardDrop.swift */; };
 		3126BC50285E1F0400D4FF1B /* CardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC4F285E1F0400D4FF1B /* CardsApp.swift */; };
 		3126BC52285E1F0400D4FF1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC51285E1F0400D4FF1B /* ContentView.swift */; };
 		3126BC54285E1F0600D4FF1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3126BC53285E1F0600D4FF1B /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 		3126BC7B285E5A7000D4FF1B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC7A285E5A7000D4FF1B /* Settings.swift */; };
 		3126BC7D285E5BDC00D4FF1B /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC7C285E5BDC00D4FF1B /* ColorExtensions.swift */; };
 		3126BC7F285E5D5500D4FF1B /* CardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126BC7E285E5D5500D4FF1B /* CardToolbar.swift */; };
+		314DF1FF286B464600586193 /* PencilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DF1FE286B464500586193 /* PencilView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,8 @@
 		3125563028610EF4002360E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		31255633286114CC002360E2 /* StickerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPicker.swift; sourceTree = "<group>"; };
 		31255635286116D3002360E2 /* Stickers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Stickers; path = "../../../suia-materials-editions-1.0/16-adding-assets-to-your-app/assets/Stickers"; sourceTree = "<group>"; };
+		312556372863AD8C002360E2 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		312556392863BC79002360E2 /* CardDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDrop.swift; sourceTree = "<group>"; };
 		3126BC4C285E1F0400D4FF1B /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3126BC4F285E1F0400D4FF1B /* CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsApp.swift; sourceTree = "<group>"; };
 		3126BC51285E1F0400D4FF1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		3126BC7A285E5A7000D4FF1B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3126BC7C285E5BDC00D4FF1B /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		3126BC7E285E5D5500D4FF1B /* CardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardToolbar.swift; sourceTree = "<group>"; };
+		314DF1FE286B464500586193 /* PencilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				31255633286114CC002360E2 /* StickerPicker.swift */,
+				312556372863AD8C002360E2 /* PhotoPicker.swift */,
+				314DF1FE286B464500586193 /* PencilView.swift */,
 			);
 			path = "Card Modal Views";
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				312556272860BB22002360E2 /* CardElement.swift */,
 				312556292860BB4B002360E2 /* Card.swift */,
 				3125562B2860BBB0002360E2 /* CardStore.swift */,
+				312556392863BC79002360E2 /* CardDrop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,10 +278,12 @@
 				3125562C2860BBB0002360E2 /* CardStore.swift in Sources */,
 				3126BC50285E1F0400D4FF1B /* CardsApp.swift in Sources */,
 				3126BC62285E205D00D4FF1B /* SingleCardView.swift in Sources */,
+				3125563A2863BC7A002360E2 /* CardDrop.swift in Sources */,
 				3126BC7B285E5A7000D4FF1B /* Settings.swift in Sources */,
 				3126BC71285E4CB900D4FF1B /* ResizableView.swift in Sources */,
 				3126BC75285E507000D4FF1B /* Operators.swift in Sources */,
 				3126BC60285E200E00D4FF1B /* CardThumbnailView.swift in Sources */,
+				314DF1FF286B464600586193 /* PencilView.swift in Sources */,
 				31255624285E6541002360E2 /* PreviewData.swift in Sources */,
 				31255634286114CC002360E2 /* StickerPicker.swift in Sources */,
 				3125562F2860C68D002360E2 /* CardElementView.swift in Sources */,
@@ -280,6 +291,7 @@
 				3126BC6A285E279100D4FF1B /* CardModal.swift in Sources */,
 				31255626285E6559002360E2 /* TextExtensions.swift in Sources */,
 				3126BC68285E25F500D4FF1B /* CardDetailView.swift in Sources */,
+				312556382863AD8C002360E2 /* PhotoPicker.swift in Sources */,
 				3126BC7D285E5BDC00D4FF1B /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
