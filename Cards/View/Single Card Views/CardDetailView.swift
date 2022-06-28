@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct CardDetailView: View {
+    @Environment(\.scenePhase) private var scenePhase
   @EnvironmentObject var viewState: ViewState
   @State private var currentModal: CardModal?
   @State private var stickerImage: UIImage?
   @State private var images: [UIImage] = []
     @State private var frame: AnyShape?
+    @State private var textElement =  TextElement()
   @Binding var card: Card
 
   var body: some View {
     content
       .onDrop(of: [.image], delegate: CardDrop(card: $card))
       .modifier(CardToolbar(currentModal: $currentModal))
+      .onChange(of: scenePhase, perform: { newScenePhase in
+          if newScenePhase == .inactive {
+              card.save()
+          }
+      })
+      .onDisappear {
+          card.save()
+      }
       .sheet(item: $currentModal) { item in
         switch item {
         case .stickerPicker:
@@ -45,8 +55,14 @@ struct CardDetailView: View {
                     }
                     frame = nil
                 }
-        default:
-          EmptyView()
+        case .textPicker:
+            TextPicker(textElement: $textElement)
+                .onDisappear {
+                  if !textElement.text.isEmpty {
+                    card.addElement(textElement)
+                  }
+                  textElement = TextElement()
+                }
         }
       }
   }
